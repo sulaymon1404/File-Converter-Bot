@@ -3,6 +3,7 @@ dotenv.config();
 import { Telegraf, Markup, Context } from "telegraf";
 import sharp from "sharp";
 import axios from "axios";
+import http from "http";
 
 
 const bot = new Telegraf(process.env.TELEGRAM_API_TOKEN as string);
@@ -65,6 +66,19 @@ bot.action(/^convert_(.+)$/, async (ctx) => {
 
 bot.launch();
 console.log("Bot is running...");
+
+
+
+// Optional HTTP server part (if needed) for hosting the bot
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello from the HTTP server!');
+});
+
+server.listen(3000, () => {
+    console.log('HTTP server running on port 3000');
+});
+
 
 // Graceful shutdown
 process.once("SIGINT", () => bot.stop("SIGINT"));
