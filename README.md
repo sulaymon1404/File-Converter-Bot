@@ -1,4 +1,4 @@
-# File Converter Bot
+# [File Converter Bot](https://t.me/file_morph_bot)
 
 A simple Telegram bot that allows users to convert images between different formats. Supports PNG, JPEG, WebP, and more formats in the future.
 
@@ -12,7 +12,7 @@ A simple Telegram bot that allows users to convert images between different form
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/file-converter-bot.git
+    git clone https://github.com/sulaymon1404/file_morph_tg_bot.git
     ```
 
 2. Navigate to the project folder:
