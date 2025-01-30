@@ -5,7 +5,7 @@ import sharp from "sharp";
 import axios from "axios";
 
 
-const bot = new Telegraf(process.env.BOT_TOKEN as string);
+const bot = new Telegraf(process.env.TELEGRAM_API_TOKEN as string);
 
 // Store user image buffers
 const userFiles = new Map<number, Buffer>();
@@ -69,3 +69,5 @@ console.log("Bot is running...");
 // Graceful shutdown
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
+
+
